@@ -741,7 +741,7 @@ cmd plugins help="Manage plugins" {
     }
     cmd install help="Install a plugin" {
         alias i a add
-        long_help "Install a plugin\n\nnote that mise automatically can install plugins when you install a tool\ne.g.: `mise install cmake@3.30` will autoinstall the cmake plugin\n\nThis behavior can be modified in ~/.config/mise/config.toml"
+        long_help "Install a plugin\n\nnote that mise can automatically install plugins when you install a tool\ne.g.: `mise install cmake@3.30` will autoinstall the cmake plugin\n\nThis behavior can be modified in ~/.config/mise/config.toml"
         after_long_help "Examples:\n\n    # install the poetry via shorthand\n    $ mise plugins install poetry\n\n    # install the poetry plugin using a specific git url\n    $ mise plugins install poetry https://github.com/mise-plugins/mise-poetry.git\n\n    # install the poetry plugin using the git url only\n    # (poetry is inferred from the url)\n    $ mise plugins install https://github.com/mise-plugins/mise-poetry.git\n\n    # install the poetry plugin using a specific ref\n    $ mise plugins install poetry https://github.com/mise-plugins/mise-poetry.git#11d0c1e\n"
         flag "-a --all" help="Install all missing plugins\nThis will only install plugins that have matching shorthands.\ni.e.: they don't need the full git repo url"
         flag "-f --force" help="Reinstall even if plugin exists"
